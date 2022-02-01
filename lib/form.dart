@@ -1,4 +1,5 @@
 import 'package:avatar_glow/avatar_glow.dart';
+import 'package:crop_application/cropinfo.dart';
 import 'package:flutter/material.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 
@@ -222,6 +223,9 @@ class _FormExampleState extends State<FormExample> {
                     print("Father name----> $fatherName");
                     print("Mobile number----> $mobileNo");
                     print("Land Ownership----> $landOwner");
+
+
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext ctx)=>CropInfoPage()));
                   },
                   child: Padding(
                     padding: const EdgeInsets.only(

@@ -13,8 +13,6 @@ class SubmitPage extends StatefulWidget {
 class _SubmitPageState extends State<SubmitPage> {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    var safePadding = MediaQuery.of(context).padding.top;
     return Scaffold(
       // body: SingleChildScrollView(
       //   child: Column(
@@ -81,23 +79,26 @@ class _SubmitPageState extends State<SubmitPage> {
             SingleChildScrollView(
               child: Column(
                 children: [
-                  ElevatedButton(
-                    style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all(Color(0xff0D9F0E)),
-                      shape: MaterialStateProperty.all(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15),
+                  Padding(
+                    padding: const EdgeInsets.only(top:20),
+                    child: ElevatedButton(
+                      style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all(Color(0xff0D9F0E)),
+                        shape: MaterialStateProperty.all(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15),
+                          ),
                         ),
                       ),
-                    ),
-                    onPressed: () {},
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 30, right: 30),
-                      child: Text(
-                        "Sumbit Page",
-                        style:
-                            TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                      onPressed: () {},
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 30, right: 30),
+                        child: Text(
+                          "Sumbit Page",
+                          style:
+                              TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                        ),
                       ),
                     ),
                   ),
@@ -139,21 +140,24 @@ class _SubmitPageState extends State<SubmitPage> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 20),
-                    child: Container(
-                      child: Center(
-                        child: Text(
-                          "Start",
-                          style: TextStyle(
-                              color: Color(0xffDDE0CF),
-                              fontSize: 35,
-                              fontWeight: FontWeight.bold),
+                    child: GestureDetector(
+                      onTap: (){},
+                      child: Container(
+                        child: Center(
+                          child: Text(
+                            "Start",
+                            style: TextStyle(
+                                color: Color(0xffDDE0CF),
+                                fontSize: 35,
+                                fontWeight: FontWeight.bold),
+                          ),
                         ),
+                        decoration: BoxDecoration(
+                            color: Color(0xff0D9F0E),
+                            borderRadius: BorderRadius.circular(100)),
+                        height: 180,
+                        width: 180,
                       ),
-                      decoration: BoxDecoration(
-                          color: Color(0xff0D9F0E),
-                          borderRadius: BorderRadius.circular(100)),
-                      height: 180,
-                      width: 180,
                     ),
                   ),
                   Padding(

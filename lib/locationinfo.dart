@@ -2,6 +2,8 @@ import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 
+import 'submitpage.dart';
+
 class LocationInfo extends StatefulWidget {
   const LocationInfo({ Key key }) : super(key: key);
 
@@ -32,6 +34,9 @@ class _LocationInfoState extends State<LocationInfo> {
   @override
   void initState() {
     super.initState();
+    Future.delayed(Duration(seconds: 3),(){
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext ctx)=> SubmitPage()));
+    });
     _speech = stt.SpeechToText();
   }
   @override

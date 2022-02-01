@@ -1,4 +1,5 @@
 import 'package:avatar_glow/avatar_glow.dart';
+import 'package:crop_application/landinfo.dart';
 import 'package:flutter/material.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 
@@ -256,6 +257,10 @@ class _CropInfoPageState extends State<CropInfoPage> {
                     print("Father name----> $fatherName");
                     print("Mobile number----> $mobileNo");
                     print("Land Ownership----> $landOwner");
+
+
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext ctx)=>LandInfoPage()));
+
                   },
                   child: Padding(
                     padding: const EdgeInsets.only(
